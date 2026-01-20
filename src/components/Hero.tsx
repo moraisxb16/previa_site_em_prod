@@ -159,7 +159,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="relative mt-8 lg:mt-0"
+              className="relative mt-12 lg:mt-0"
             >
               <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 {/* Decorative orbs inside image */}
