@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Play, Sparkles } from 'lucide-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export function Hero() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -92,9 +92,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
+              className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8"
             >
-              <div className="group">
+              <div className="group flex-1">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
                   <div className="relative glass p-4 sm:p-6 rounded-xl">
@@ -104,7 +104,7 @@ export function Hero() {
                 </div>
               </div>
               
-              <div className="group">
+              <div className="group flex-1">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
                   <div className="relative glass p-4 sm:p-6 rounded-xl">
@@ -114,7 +114,7 @@ export function Hero() {
                 </div>
               </div>
               
-              <div className="group">
+              <div className="group flex-1">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
                   <div className="relative glass p-4 sm:p-6 rounded-xl">
