@@ -21,7 +21,7 @@ export function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-4 md:gap-8 lg:gap-16 items-center">
             {/* Left: content */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -159,7 +159,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="relative mt-12 lg:mt-0"
+              className="relative"
             >
               <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 {/* Decorative orbs inside image */}
