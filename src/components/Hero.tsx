@@ -92,12 +92,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 max-w-3xl ml-auto"
+              className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 max-w-4xl ml-auto"
             >
               <div className="group flex-1">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-4 sm:p-6 lg:p-10 rounded-xl">
+                  <div className="relative glass px-6 py-4 sm:px-7 sm:py-5 lg:px-10 lg:py-6 rounded-xl">
                     <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
                       250+
                     </div>
@@ -109,7 +109,7 @@ export function Hero() {
               <div className="group flex-1">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-4 sm:p-6 lg:p-10 rounded-xl">
+                  <div className="relative glass px-6 py-4 sm:px-7 sm:py-5 lg:px-10 lg:py-6 rounded-xl">
                     <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
                       98%
                     </div>
@@ -121,7 +121,7 @@ export function Hero() {
               <div className="group flex-1">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-4 sm:p-6 lg:p-10 rounded-xl">
+                  <div className="relative glass px-6 py-4 sm:px-7 sm:py-5 lg:px-10 lg:py-6 rounded-xl">
                     <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-emerald-400 to-white bg-clip-text text-transparent">
                       30+
                     </div>
