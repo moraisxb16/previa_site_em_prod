@@ -52,14 +52,14 @@ export function Hero() {
               <span>Mais de 30 anos de excelência no mercado</span>
             </motion.div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-[1.1]">
               Construindo o
               <span className="block mt-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
                 Futuro com Você
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl">
               Transformamos sonhos em realidade através de empreendimentos de alta qualidade, 
               tecnologia de ponta e compromisso com a excelência.
             </p>
@@ -70,7 +70,7 @@ export function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl transition-all font-semibold flex items-center justify-center gap-3 shadow-2xl shadow-blue-600/40 hover:shadow-blue-600/60"
               >
-                <span className="text-lg">Conheça Nossos Empreendimentos</span>
+                <span className="text-base sm:text-lg">Conheça Nossos Empreendimentos</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               
@@ -83,7 +83,7 @@ export function Hero() {
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                   <Play className="w-5 h-5 ml-0.5" />
                 </div>
-                <span className="text-lg">Assista ao Vídeo</span>
+                <span className="text-base sm:text-lg">Assista ao Vídeo</span>
               </motion.button>
             </div>
 
@@ -92,13 +92,13 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-3 gap-6 lg:gap-8"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
             >
               <div className="group">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-6 rounded-xl">
-                    <div className="text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">250+</div>
+                  <div className="relative glass p-4 sm:p-6 rounded-xl">
+                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">250+</div>
                     <div className="text-gray-300 text-sm lg:text-base font-medium">Obras Entregues</div>
                   </div>
                 </div>
@@ -107,8 +107,8 @@ export function Hero() {
               <div className="group">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-6 rounded-xl">
-                    <div className="text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">98%</div>
+                  <div className="relative glass p-4 sm:p-6 rounded-xl">
+                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">98%</div>
                     <div className="text-gray-300 text-sm lg:text-base font-medium">Clientes Satisfeitos</div>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ export function Hero() {
               <div className="group">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-6 rounded-xl">
-                    <div className="text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-emerald-400 to-white bg-clip-text text-transparent">30+</div>
+                  <div className="relative glass p-4 sm:p-6 rounded-xl">
+                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-emerald-400 to-white bg-clip-text text-transparent">30+</div>
                     <div className="text-gray-300 text-sm lg:text-base font-medium">Anos de Mercado</div>
                   </div>
                 </div>

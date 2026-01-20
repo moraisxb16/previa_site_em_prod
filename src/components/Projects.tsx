@@ -126,7 +126,7 @@ export function Projects() {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold transition-all text-sm sm:text-base ${
                 activeFilter === filter.id
                   ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-600/30'
                   : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
@@ -182,7 +182,7 @@ export function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h3>
@@ -195,20 +195,20 @@ export function Projects() {
                 {/* Price */}
                 <div className="mb-6 pb-6 border-b border-gray-100">
                   <p className="text-sm text-gray-500 mb-1">Preço</p>
-                  <p className="text-2xl font-bold text-gray-900">{project.price}</p>
+                  <p className="text-xl sm:text-2xl font-bold text-gray-900">{project.price}</p>
                 </div>
 
                 {/* Specs */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="text-center p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
+                  <div className="text-center p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
                     <Maximize2 className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                     <div className="text-xs font-semibold text-gray-900">{project.specs.area}</div>
                   </div>
-                  <div className="text-center p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
+                  <div className="text-center p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
                     <Bed className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                     <div className="text-xs font-semibold text-gray-900">{project.specs.rooms}</div>
                   </div>
-                  <div className="text-center p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
+                  <div className="text-center p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
                     <Car className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                     <div className="text-xs font-semibold text-gray-900">{project.specs.parking}</div>
                   </div>

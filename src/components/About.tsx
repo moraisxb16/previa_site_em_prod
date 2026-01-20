@@ -21,7 +21,7 @@ export function About() {
   ];
 
   return (
-    <section id="sobre" className="py-24 bg-gray-50">
+    <section id="sobre" className="py-24 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Images */}
@@ -38,8 +38,8 @@ export function About() {
                 alt="Equipe de construção"
                 className="rounded-2xl shadow-2xl w-full"
               />
-              <div className="absolute -bottom-8 -right-8 bg-blue-600 text-white p-8 rounded-2xl shadow-xl">
-                <div className="text-4xl font-bold mb-2">30+</div>
+              <div className="absolute bottom-4 right-4 sm:-bottom-8 sm:-right-8 bg-blue-600 text-white p-6 sm:p-8 rounded-2xl shadow-xl max-w-[calc(100%-2rem)]">
+                <div className="text-3xl sm:text-4xl font-bold mb-2">30+</div>
                 <div className="text-sm opacity-90">Anos de Tradição</div>
               </div>
             </div>
