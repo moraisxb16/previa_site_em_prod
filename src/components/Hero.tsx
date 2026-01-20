@@ -1,9 +1,195 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Play, Sparkles } from 'lucide-react';
-import React, { useState } from 'react';
+import { ArrowRight, Play, Sparkles, Trophy, Star, Calendar } from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 export function Hero() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [stats, setStats] = useState({ delivered: 0, satisfied: 0, years: 0 });
+
+  type StatAccent = 'blue' | 'purple' | 'emerald';
+  type StatCardProps = {
+    accent: StatAccent;
+    gradient: string;
+    icon: React.ComponentType<{ className?: string }>;
+    value: number;
+    suffix: string;
+    label: string;
+  };
+
+  const statCards = useMemo<Array<{ id: string } & StatCardProps>>(
+    () => [
+      {
+        id: 'delivered',
+        label: 'Obras Entregues',
+        icon: Trophy,
+        value: stats.delivered,
+        suffix: '+',
+        accent: 'blue',
+        gradient: 'from-blue-400 to-white',
+      },
+      {
+        id: 'satisfied',
+        label: 'Clientes Satisfeitos',
+        icon: Star,
+        value: stats.satisfied,
+        suffix: '%',
+        accent: 'purple',
+        gradient: 'from-purple-400 to-white',
+      },
+      {
+        id: 'years',
+        label: 'Anos de Mercado',
+        icon: Calendar,
+        value: stats.years,
+        suffix: '+',
+        accent: 'emerald',
+        gradient: 'from-emerald-400 to-white',
+      },
+    ],
+    [stats],
+  );
+
+  // Counter animation (runs once; respects reduced motion)
+  useEffect(() => {
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced) {
+      setStats({ delivered: 250, satisfied: 98, years: 30 });
+      return;
+    }
+
+    const start = performance.now();
+    const duration = 900;
+    const from = { delivered: 0, satisfied: 0, years: 0 };
+    const to = { delivered: 250, satisfied: 98, years: 30 };
+
+    let raf = 0;
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - start) / duration);
+      const ease = 1 - Math.pow(1 - t, 3); // easeOutCubic
+      setStats({
+        delivered: Math.round(from.delivered + (to.delivered - from.delivered) * ease),
+        satisfied: Math.round(from.satisfied + (to.satisfied - from.satisfied) * ease),
+        years: Math.round(from.years + (to.years - from.years) * ease),
+      });
+      if (t < 1) raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  const StatCard: React.FC<StatCardProps> = ({ accent, gradient, icon: Icon, value, suffix, label }) => {
+    const accentMap = {
+      blue: {
+        glow: 'from-blue-600/20 to-transparent',
+        border: 'border-blue-400/20',
+        chip: 'bg-blue-600/20 border-blue-400/30 text-blue-200',
+        progress: 'bg-blue-600/70',
+      },
+      purple: {
+        glow: 'from-purple-600/20 to-transparent',
+        border: 'border-purple-400/20',
+        chip: 'bg-purple-600/20 border-purple-400/30 text-purple-200',
+        progress: 'bg-purple-600/70',
+      },
+      emerald: {
+        glow: 'from-emerald-600/20 to-transparent',
+        border: 'border-emerald-400/20',
+        chip: 'bg-green-500/20 border-green-500/30 text-gray-200',
+        progress: 'bg-emerald-600/70',
+      },
+    } as const satisfies Record<StatAccent, { glow: string; border: string; chip: string; progress: string }>;
+
+    const a = accentMap[accent];
+
+    return (
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.2 }}
+        className="group flex-1"
+      >
+        <div className="relative">
+          {/* Glow */}
+          <div
+            className={[
+              'absolute -inset-0.5 rounded-2xl blur-xl transition-all duration-300 opacity-70 group-hover:opacity-100',
+              `bg-gradient-to-r ${a.glow}`,
+            ].join(' ')}
+          />
+
+          {/* Card */}
+          <div
+            className={[
+              'relative overflow-hidden rounded-2xl border',
+              a.border,
+              'bg-white/5 backdrop-blur-md shadow-xl',
+              'p-5 sm:p-6 md:p-7',
+              'transition-all duration-300 group-hover:bg-white/10 group-hover:backdrop-blur-md',
+            ].join(' ')}
+          >
+            {/* Subtle noise/pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.25) 1px, transparent 0)",
+                  backgroundSize: '14px 14px',
+                }}
+              />
+            </div>
+
+            <div className="relative flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className={[
+                      'inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-sm',
+                      a.chip,
+                    ].join(' ')}
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>Métrica</span>
+                  </span>
+                </div>
+
+                <div className={['text-4xl md:text-5xl lg:text-6xl font-bold mb-2 bg-gradient-to-r bg-clip-text text-transparent', gradient].join(' ')}>
+                  {value}
+                  {suffix}
+                </div>
+
+                <div className="text-gray-200 text-sm md:text-base font-semibold tracking-wide">
+                  {label}
+                </div>
+              </div>
+
+              {/* Accent edge */}
+              <div
+                aria-hidden="true"
+                className="relative h-12 w-12 flex-shrink-0 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm flex items-center justify-center shadow-lg"
+              >
+                <Icon className="h-6 w-6 text-white/90" />
+              </div>
+            </div>
+
+            {/* Progress indicator */}
+            <div className="relative mt-5">
+              <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden">
+                <div
+                  className={['h-full rounded-full', a.progress].join(' ')}
+                  style={{ width: `${Math.min(100, Math.max(45, value))}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  };
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -92,37 +278,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8"
+              className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 md:max-w-3xl md:ml-auto md:pl-6"
             >
-              <div className="group flex-1">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-4 sm:p-6 rounded-xl">
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">250+</div>
-                    <div className="text-gray-300 text-sm lg:text-base font-medium">Obras Entregues</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="group flex-1">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-4 sm:p-6 rounded-xl">
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">98%</div>
-                    <div className="text-gray-300 text-sm lg:text-base font-medium">Clientes Satisfeitos</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="group flex-1">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-transparent rounded-xl blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative glass p-4 sm:p-6 rounded-xl">
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 bg-gradient-to-r from-emerald-400 to-white bg-clip-text text-transparent">30+</div>
-                    <div className="text-gray-300 text-sm lg:text-base font-medium">Anos de Mercado</div>
-                  </div>
-                </div>
-              </div>
+              {statCards.map(({ id, ...card }) => (
+                <StatCard key={id} {...card} />
+              ))}
             </motion.div>
           </motion.div>
         </div>
