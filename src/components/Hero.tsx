@@ -1,9 +1,12 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Play, Sparkles, Building2, Users, Award } from 'lucide-react';
-import React, { useState } from 'react';
+import { ArrowRight, Play, Sparkles, FileCheck, Users, Award } from 'lucide-react';
+import React from 'react';
 
 export function Hero() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -37,41 +40,39 @@ export function Hero() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600/90 to-blue-700/90 backdrop-blur-sm text-white text-sm font-semibold rounded-full mb-8 border border-blue-400/30 shadow-lg shadow-blue-600/30"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Mais de 30 anos de excelência no mercado</span>
+                <span>Mais de 20 anos de excelência no mercado</span>
               </motion.div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1]">
-                Construindo o
-                <span className="block mt-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                  Futuro com Você
-                </span>
+                Excelência em
+                <span className="text-blue-400 block">Regularização Imobiliária</span>
               </h1>
               
               <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
-                Transformamos sonhos em realidade através de empreendimentos de alta qualidade, 
-                tecnologia de ponta e compromisso com a excelência.
+                Guiamos você para resultados seguros em regularização imobiliária. Expanda o seu negócio com a segurança de que está no caminho certo.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={() => scrollToSection('solucoes')}
                   className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl transition-all font-semibold flex items-center justify-center gap-3 shadow-2xl shadow-blue-600/40 hover:shadow-blue-600/60"
                 >
-                  <span className="text-base sm:text-lg">Conheça Nossos Empreendimentos</span>
+                  <span className="text-base sm:text-lg">Conheça Nossas Soluções</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.button>
                 
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => setIsVideoPlaying(true)}
+                  onClick={() => scrollToSection('clientes')}
                   className="group glass text-white px-8 py-4 rounded-xl transition-all font-semibold flex items-center justify-center gap-3 hover:bg-white/20"
                 >
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                    <Play className="w-5 h-5 ml-0.5" />
+                    <Users className="w-5 h-5" />
                   </div>
-                  <span className="text-base sm:text-lg">Assista ao Vídeo</span>
+                  <span className="text-base sm:text-lg">Veja Quem Confia em Nós</span>
                 </motion.button>
               </div>
 
@@ -88,16 +89,16 @@ export function Hero() {
                     <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-5 py-4 shadow-xl transition-all duration-300 group-hover:bg-white/10 group-hover:border-white/20">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600/40 to-blue-800/40 border border-blue-400/30 backdrop-blur-sm flex items-center justify-center">
-                          <Building2 className="w-5 h-5 text-blue-200" />
+                          <FileCheck className="w-5 h-5 text-blue-200" />
                         </div>
                         <div className="text-xs font-semibold text-blue-200/90 bg-blue-600/15 border border-blue-400/20 px-2.5 py-1 rounded-full">
-                          Obras
+                          Projetos
                         </div>
                       </div>
                       <div className="text-4xl lg:text-5xl font-bold mb-1 bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
-                        250+
+                        1000+
                       </div>
-                      <div className="text-gray-200 text-sm font-semibold">Obras Entregues</div>
+                      <div className="text-gray-200 text-sm font-semibold">Projetos Regularizados</div>
                     </div>
                   </div>
                 </motion.div>
@@ -120,7 +121,7 @@ export function Hero() {
                         </div>
                       </div>
                       <div className="text-4xl lg:text-5xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
-                        98%
+                        95%
                       </div>
                       <div className="text-gray-200 text-sm font-semibold">Clientes Satisfeitos</div>
                     </div>
@@ -145,7 +146,7 @@ export function Hero() {
                         </div>
                       </div>
                       <div className="text-4xl lg:text-5xl font-bold mb-1 bg-gradient-to-r from-emerald-400 to-white bg-clip-text text-transparent">
-                        30+
+                        20+
                       </div>
                       <div className="text-gray-200 text-sm font-semibold">Anos de Mercado</div>
                     </div>
@@ -169,8 +170,8 @@ export function Hero() {
                 <motion.img
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.35 }}
-                  src="https://images.unsplash.com/photo-1612301988752-5a5b19021f45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2ODkxNjA0OXww&ixlib=rb-4.1.0&q=80&w=1400&utm_source=figma&utm_medium=referral"
-                  alt="Empreendimento de luxo"
+                  src="https://images.unsplash.com/photo-1692133226337-55e513450a32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGxlZ2FsJTIwZG9jdW1lbnRzfGVufDF8fHx8MTc2OTAxNTk5MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Regularização Imobiliária Profissional"
                   className="w-full h-[420px] lg:h-[520px] object-cover"
                 />
 
@@ -183,8 +184,8 @@ export function Hero() {
                   <div className="glass border border-white/20 rounded-2xl px-6 py-5 shadow-xl">
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <div className="text-white text-xl font-bold">Empreendimentos Premium</div>
-                        <div className="text-gray-200 text-sm opacity-90">Qualidade que você pode confiar</div>
+                        <div className="text-white text-xl font-bold">Certificada ISO 9001</div>
+                        <div className="text-gray-200 text-sm opacity-90">Atuação em todo o território nacional</div>
                       </div>
                       <div className="w-12 h-12 rounded-full bg-blue-600/90 flex items-center justify-center shadow-lg">
                         <Award className="w-6 h-6 text-white" />
@@ -214,35 +215,6 @@ export function Hero() {
         </div>
       </motion.div>
 
-      {/* Video Modal */}
-      {isVideoPlaying && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4"
-          onClick={() => setIsVideoPlaying(false)}
-        >
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            className="relative w-full max-w-5xl aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setIsVideoPlaying(false)}
-              className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white z-10"
-            >
-              ✕
-            </button>
-            <div className="w-full h-full flex items-center justify-center text-white">
-              <div className="text-center">
-                <Play className="w-20 h-20 mx-auto mb-4 opacity-50" />
-                <p className="text-gray-400">Vídeo de apresentação</p>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
     </section>
   );
 }

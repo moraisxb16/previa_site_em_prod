@@ -35,8 +35,8 @@ export function Header() {
               <span className="text-white font-bold text-xl">C</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Construtora Elite</h1>
-              <p className="text-xs text-gray-600">Construindo Sonhos</p>
+              <h1 className="text-xl font-bold text-gray-900">Construsato</h1>
+              <p className="text-xs text-gray-600">Regularização Imobiliária</p>
             </div>
           </div>
 
@@ -46,13 +46,13 @@ export function Header() {
               Início
             </button>
             <button onClick={() => scrollToSection('sobre')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Sobre
+              Sobre Nós
             </button>
-            <button onClick={() => scrollToSection('empreendimentos')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Empreendimentos
+            <button onClick={() => scrollToSection('solucoes')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Soluções
             </button>
-            <button onClick={() => scrollToSection('diferenciais')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Diferenciais
+            <button onClick={() => scrollToSection('clientes')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Clientes
             </button>
             <button onClick={() => scrollToSection('contato')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Contato
@@ -61,15 +61,15 @@ export function Header() {
 
           {/* Contact Info - Desktop */}
           <div className="hidden lg:flex items-center space-x-6">
-            <a href="tel:+5511999999999" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="tel:+551122615976" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">(11) 99999-9999</span>
+              <span className="text-sm font-medium">(11) 2261-5976</span>
             </a>
             <button
               onClick={() => scrollToSection('contato')}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-colors font-medium"
             >
-              Fale Conosco
+              Entre em Contato
             </button>
           </div>
 
@@ -90,21 +90,21 @@ export function Header() {
                 Início
               </button>
               <button onClick={() => scrollToSection('sobre')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left">
-                Sobre
+                Sobre Nós
               </button>
-              <button onClick={() => scrollToSection('empreendimentos')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left">
-                Empreendimentos
+              <button onClick={() => scrollToSection('solucoes')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left">
+                Soluções
               </button>
-              <button onClick={() => scrollToSection('diferenciais')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left">
-                Diferenciais
+              <button onClick={() => scrollToSection('clientes')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left">
+                Clientes
               </button>
               <button onClick={() => scrollToSection('contato')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left">
                 Contato
               </button>
               <div className="pt-4 border-t border-gray-200">
-                <a href="tel:+5511999999999" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+                <a href="tel:+551122615976" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm font-medium">(11) 99999-9999</span>
+                  <span className="text-sm font-medium">(11) 2261-5976</span>
                 </a>
               </div>
             </div>

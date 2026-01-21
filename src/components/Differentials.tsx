@@ -1,42 +1,43 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { Shield, Clock, Leaf, Headphones, Award, DollarSign } from 'lucide-react';
+import { Shield, Clock, FileCheck, Headphones, Award, Scale } from 'lucide-react';
 
 export function Differentials() {
   const differentials = [
     {
       icon: Shield,
-      title: 'Garantia Estendida',
-      description: 'Todos os nossos empreendimentos contam com 5 anos de garantia',
+      title: 'Certificação ISO 9001',
+      description: 'Empresa certificada com padrões internacionais de qualidade em gestão',
       color: 'bg-blue-100 text-blue-600',
     },
     {
       icon: Clock,
-      title: 'Pontualidade',
-      description: 'Cumprimento rigoroso de prazos em 98% das nossas obras',
+      title: 'Atendimento aos Prazos',
+      description: 'Compromisso com prazos estabelecidos em 95% dos nossos projetos',
       color: 'bg-purple-100 text-purple-600',
     },
     {
-      icon: Leaf,
-      title: 'Sustentabilidade',
-      description: 'Práticas sustentáveis e certificações ambientais',
+      icon: FileCheck,
+      title: 'Expertise Técnica',
+      description: 'Equipe especializada em processos regulatórios e aprovações',
       color: 'bg-green-100 text-green-600',
     },
     {
       icon: Headphones,
-      title: 'Atendimento VIP',
-      description: 'Equipe dedicada para atender você do início ao pós-venda',
+      title: 'Atendimento Personalizado',
+      description: 'Equipe dedicada para atender você do início até a conclusão',
       color: 'bg-orange-100 text-orange-600',
     },
     {
       icon: Award,
-      title: 'Qualidade Premium',
-      description: 'Materiais de primeira linha e acabamento impecável',
+      title: '20+ Anos de Mercado',
+      description: 'Mais de duas décadas de experiência em regularização imobiliária',
       color: 'bg-red-100 text-red-600',
     },
     {
-      icon: DollarSign,
-      title: 'Melhor Investimento',
-      description: 'Localização estratégica garantindo alta valorização',
+      icon: Scale,
+      title: 'Princípios Éticos',
+      description: 'Fundada em seriedade, qualidade e eficiência em cada projeto',
       color: 'bg-emerald-100 text-emerald-600',
     },
   ];
@@ -60,13 +61,13 @@ export function Differentials() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">
-              Por que nos escolher
+              Conheça nossas soluções
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-              Nossos Diferenciais
+              Nossa equipe técnica está preparada
             </h2>
             <p className="text-gray-300 text-lg">
-              Compromisso com a excelência em cada detalhe do seu investimento
+              Compromisso com a excelência em cada detalhe do seu projeto de regularização
             </p>
           </motion.div>
         </div>
@@ -107,13 +108,16 @@ export function Differentials() {
         >
           <div className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Pronto para realizar seu sonho?
+              Pronto para regularizar seu empreendimento?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Fale com nossos especialistas e descubra o empreendimento perfeito para você
+              Fale com nossos especialistas e descubra a melhor solução para o seu negócio
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-colors font-semibold">
-              Agendar Visita
+            <button
+              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-colors font-semibold"
+            >
+              Entrar em Contato
             </button>
           </div>
         </motion.div>

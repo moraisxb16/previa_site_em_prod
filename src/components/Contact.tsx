@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Calendar } from 'lucide-react';
-import { useState } from 'react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -31,25 +31,25 @@ export function Contact() {
     {
       icon: Phone,
       title: 'Telefone',
-      content: '(11) 99999-9999',
+      content: '(11) 2261-5976 | 2265-5599',
       subcontent: 'Seg - Sex, 9h às 18h',
-      href: 'tel:+551199999999',
+      href: 'tel:+551122615976',
       gradient: 'from-blue-600 to-blue-700',
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      content: '(11) 99999-9999',
+      content: '(11) 94763-6231',
       subcontent: 'Atendimento rápido',
-      href: 'https://wa.me/551199999999',
+      href: 'https://wa.me/5511947636231',
       gradient: 'from-green-600 to-green-700',
     },
     {
       icon: Mail,
       title: 'E-mail',
-      content: 'contato@construtoraelite.com.br',
+      content: 'construsato@construsato.com.br',
       subcontent: 'Respondemos em até 24h',
-      href: 'mailto:contato@construtoraelite.com.br',
+      href: 'mailto:construsato@construsato.com.br',
       gradient: 'from-purple-600 to-purple-700',
     },
   ];
@@ -76,11 +76,10 @@ export function Contact() {
               <span>Entre em Contato</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Vamos Conversar Sobre Seu Projeto
+              Entre em contato
             </h2>
             <p className="text-gray-600 text-lg">
-              Nossa equipe de especialistas está pronta para ajudar você a encontrar 
-              o empreendimento perfeito
+              Conte-nos sobre o seu projeto.
             </p>
           </motion.div>
         </div>
@@ -135,8 +134,8 @@ export function Contact() {
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 mb-1">Endereço</h3>
                   <p className="text-gray-700 font-medium">
-                    Av. Paulista, 1000 - Bela Vista<br />
-                    São Paulo - SP, 01310-100
+                    Rua Voluntários da Pátria, nº 2468, 12º andar, conjuntos 121, 122, 123,124 e 126<br />
+                    Santana – São Paulo | SP, CEP: 02402-000
                   </p>
                 </div>
               </div>
@@ -241,14 +240,14 @@ export function Contact() {
                         onBlur={() => setFocusedField('')}
                         required
                         className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:bg-white outline-none transition-all"
-                        placeholder="(11) 99999-9999"
+                        placeholder="(11) 2261-5976"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="interest" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Interesse
+                      Como nos conheceu?
                     </label>
                     <div className={`relative transition-all ${focusedField === 'interest' ? 'scale-[1.02]' : ''}`}>
                       <select
@@ -260,12 +259,11 @@ export function Contact() {
                         onBlur={() => setFocusedField('')}
                         className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:bg-white outline-none transition-all"
                       >
-                        <option value="">Selecione um empreendimento</option>
-                        <option value="park-view">Residencial Park View</option>
-                        <option value="skyline">Edifício Skyline Premium</option>
-                        <option value="sunset">Condomínio Sunset</option>
-                        <option value="horizon">Residencial Horizon</option>
-                        <option value="outros">Outros</option>
+                        <option value="">Selecione uma opção</option>
+                        <option value="indicacao">Indicação de alguém</option>
+                        <option value="google">Pesquisa no Google</option>
+                        <option value="linkedin">Linkedin</option>
+                        <option value="redes">Redes Sociais (Instagram e Facebook)</option>
                       </select>
                     </div>
                   </div>
@@ -285,7 +283,7 @@ export function Contact() {
                       onBlur={() => setFocusedField('')}
                       rows={5}
                       className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:bg-white outline-none transition-all resize-none"
-                      placeholder="Como podemos ajudar você?"
+                      placeholder="Como podemos te ajudar?"
                     />
                   </div>
                 </div>
@@ -302,7 +300,7 @@ export function Contact() {
 
                 <p className="text-sm text-gray-500 text-center">
                   Ao enviar este formulário, você concorda com nossa{' '}
-                  <a href="#" className="text-blue-600 hover:underline">política de privacidade</a>
+                  <a href="#" className="text-blue-600 hover:underline">Política de Privacidade</a>
                 </p>
               </form>
             </div>

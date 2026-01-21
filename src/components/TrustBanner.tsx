@@ -1,19 +1,20 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Award, Building2, Users, TrendingUp } from 'lucide-react';
 
 export function TrustBanner() {
   const logos = [
-    { name: 'ISO 9001', icon: Award },
-    { name: 'PBQP-H', icon: Building2 },
-    { name: 'SECOVI', icon: Users },
-    { name: 'SINDUSCON', icon: TrendingUp },
+    { name: 'Midea Carrier', icon: Building2 },
+    { name: 'Igreja Bola de Neve', icon: Users },
+    { name: 'Anvisa', icon: Award },
+    { name: 'Corpo de Bombeiros', icon: TrendingUp },
   ];
 
   return (
-    <section className="py-8 bg-white border-y border-gray-100">
+    <section id="clientes" className="py-8 bg-white border-y border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center mb-6">
-          <p className="text-sm text-gray-600 font-medium">Certificações e Associações</p>
+          <p className="text-sm text-gray-600 font-medium">Veja quem confia em nós</p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-12 lg:gap-16">
           {logos.map((logo, index) => (

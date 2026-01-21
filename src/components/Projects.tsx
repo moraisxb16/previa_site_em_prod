@@ -1,90 +1,74 @@
 import { motion } from 'motion/react';
-import { MapPin, Maximize2, Bed, Car, ArrowRight, Sparkles, TrendingUp } from 'lucide-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { FileSearch, FileCheck, Building2, Shield, ArrowRight, Sparkles } from 'lucide-react';
 
 export function Projects() {
   const [activeFilter, setActiveFilter] = useState('todos');
 
   const filters = [
-    { id: 'todos', label: 'Todos' },
-    { id: 'lancamento', label: 'Lançamento' },
-    { id: 'construcao', label: 'Em Construção' },
-    { id: 'prontos', label: 'Prontos' },
+    { id: 'todos', label: 'Todos os Serviços' },
+    { id: 'estudos', label: 'Estudos' },
+    { id: 'licenciamentos', label: 'Licenciamentos' },
+    { id: 'aprovacoes', label: 'Aprovações' },
   ];
 
-  const projects = [
+  const solutions = [
     {
       id: 1,
-      title: 'Residencial Park View',
-      location: 'Jardim Paulista, São Paulo',
-      image: 'https://images.unsplash.com/photo-1627141234469-24711efb373c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmUlMjBtb2Rlcm4lMjBob3VzZXxlbnwxfHx8fDE3Njg5MTU0NjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      status: 'Lançamento',
-      specs: {
-        area: '95-145m²',
-        rooms: '3-4 quartos',
-        parking: '2-3 vagas',
-      },
-      tag: 'Novo',
+      title: 'EVTL - Estudos de Viabilidade',
+      subtitle: 'Análise completa para seu empreendimento',
+      description: 'Os EVTL’s (Estudos de Viabilidade Técnica e Legal) englobam serviços como análises de imóveis ou terrenos, avaliações técnicas e legais, estudos de massa e estimativa de custos quanto ao escopo de processos regulatórios. Apresentamos diagnósticos que avaliam o empreendimento de forma completa, em busca da melhor solução.',
+      image: 'https://images.unsplash.com/photo-1721132537184-5494c01ed87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3QlMjBibHVlcHJpbnQlMjBwbGFubmluZ3xlbnwxfHx8fDE3Njg5NzA0Njd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      icon: FileSearch,
+      tag: 'Análise',
       tagColor: 'from-blue-600 to-blue-700',
-      price: 'A partir de R$ 850.000',
-      category: 'lancamento',
+      category: 'estudos',
+      features: ['Análise de imóveis', 'Avaliação técnica e legal', 'Estudos de massa', 'Estimativa de custos'],
     },
     {
       id: 2,
-      title: 'Edifício Skyline Premium',
-      location: 'Vila Mariana, São Paulo',
-      image: 'https://images.unsplash.com/photo-1553601581-8a1f1010efbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBidWlsZGluZyUyMGZhY2FkZXxlbnwxfHx8fDE3Njg5MTE3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      status: 'Em construção',
-      specs: {
-        area: '120-180m²',
-        rooms: '3-4 quartos',
-        parking: '3-4 vagas',
-      },
-      tag: 'Destaque',
+      title: 'Licenciamentos',
+      subtitle: 'Alvarás e licenças necessárias',
+      description: 'Trabalhamos na obtenção de alvarás e licenças necessárias para a regularização do seu imóvel, Auto de Licença de Funcionamento, Certificado de Conclusão (Habite-se), Certificado de Segurança, Alvará de Aprovação e/ou Execução de Edificação, dentre a obtenção de outras licenças, fazem parte dos nossos serviços.',
+      image: 'https://images.unsplash.com/photo-1587874121242-9bd41fdc169c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMHBlcm1pdCUyMGxpY2Vuc2V8ZW58MXx8fHwxNzY5MDE2MDk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      icon: Shield,
+      tag: 'Compliance',
       tagColor: 'from-purple-600 to-purple-700',
-      price: 'A partir de R$ 1.200.000',
-      category: 'construcao',
+      category: 'licenciamentos',
+      features: ['Alvará de Funcionamento', 'Habite-se', 'Certificado de Segurança', 'Licenças diversas'],
     },
     {
       id: 3,
-      title: 'Condomínio Sunset',
-      location: 'Pinheiros, São Paulo',
-      image: 'https://images.unsplash.com/photo-1638454668466-e8dbd5462f20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBhcGFydG1lbnQlMjBpbnRlcmlvcnxlbnwxfHx8fDE3Njg4NTA0Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      status: 'Últimas unidades',
-      specs: {
-        area: '85-125m²',
-        rooms: '2-3 quartos',
-        parking: '2 vagas',
-      },
-      tag: 'Oportunidade',
-      tagColor: 'from-orange-600 to-orange-700',
-      price: 'A partir de R$ 720.000',
-      category: 'prontos',
+      title: 'Aprovações de Projetos',
+      subtitle: 'Condução completa até a conclusão',
+      description: 'A área de Aprovações de Projeto é responsável por elaborar, protocolar e conduzir até a conclusão, todos os processos aprovativos junto aos órgãos públicos. Trabalhamos na obtenção do Alvará de Aprovação e Execução de Reforma, Alvará de Construção, Habite-se, Projeto de Publicidade, dentre outros.',
+      image: 'https://images.unsplash.com/photo-1764106813759-9ef7bf42a0af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZWdhbCUyMGRvY3VtZW50JTIwYXBwcm92YWx8ZW58MXx8fHwxNzY5MDE2MDgzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      icon: FileCheck,
+      tag: 'Aprovação',
+      tagColor: 'from-emerald-600 to-emerald-700',
+      category: 'aprovacoes',
+      features: ['Alvará de Reforma', 'Alvará de Construção', 'Habite-se', 'Projeto de Publicidade'],
     },
     {
       id: 4,
-      title: 'Residencial Horizon',
-      location: 'Moema, São Paulo',
-      image: 'https://images.unsplash.com/photo-1568115286680-d203e08a8be6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZW50aG91c2UlMjB2aWV3fGVufDF8fHx8MTc2ODg3MTA5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      status: 'Lançamento',
-      specs: {
-        area: '110-165m²',
-        rooms: '3-4 quartos',
-        parking: '2-4 vagas',
-      },
-      tag: 'VIP',
-      tagColor: 'from-emerald-600 to-emerald-700',
-      price: 'A partir de R$ 980.000',
-      category: 'lancamento',
+      title: 'AVCB',
+      subtitle: 'Corpo de Bombeiros',
+      description: 'Conte com uma consultoria especializada para a Obtenção ou Renovação do AVCB (Auto de Vistoria do Corpo de Bombeiros), Elaboração de Projeto de Proteção de Combate a Incêndio, Certificado de Licença do Corpo de Bombeiros, dentre outras entregas para a regularização junto ao Corpo de Bombeiros. Realizamos treinamentos para a sua empresa.',
+      image: 'https://images.unsplash.com/photo-1748951689438-63996dd1bff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJlJTIwc2FmZXR5JTIwYnVpbGRpbmclMjBpbnNwZWN0aW9ufGVufDF8fHx8MTc2OTAxNjA4N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      icon: Building2,
+      tag: 'Segurança',
+      tagColor: 'from-orange-600 to-orange-700',
+      category: 'licenciamentos',
+      features: ['Obtenção de AVCB', 'Renovação de AVCB', 'Projeto de Combate a Incêndio', 'Treinamentos'],
     },
   ];
 
   const filteredProjects = activeFilter === 'todos' 
-    ? projects 
-    : projects.filter(p => p.category === activeFilter);
+    ? solutions 
+    : solutions.filter(p => p.category === activeFilter);
 
   return (
-    <section id="empreendimentos" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="solucoes" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-600 rounded-full blur-3xl"></div>
@@ -102,14 +86,13 @@ export function Projects() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-6">
               <Sparkles className="w-4 h-4" />
-              <span>Nossos Empreendimentos</span>
+              <span>Nossas Soluções</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Projetos de Alto Padrão
+              Conheça Nossos Serviços
             </h2>
             <p className="text-gray-600 text-lg">
-              Localização privilegiada, acabamento premium e infraestrutura completa 
-              para você e sua família.
+              Nossa equipe técnica está preparada para trazer as soluções mais assertivas e eficientes para o seu negócio.
             </p>
           </motion.div>
         </div>
@@ -139,9 +122,9 @@ export function Projects() {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((solution, index) => (
             <motion.div
-              key={project.id}
+              key={solution.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -151,32 +134,16 @@ export function Projects() {
               {/* Image */}
               <div className="relative overflow-hidden aspect-[16/10]">
                 <img
-                  src={project.image}
-                  alt={project.title}
+                  src={solution.image}
+                  alt={solution.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 
                 {/* Tag */}
                 <div className="absolute top-6 left-6">
-                  <span className={`bg-gradient-to-r ${project.tagColor} text-white px-4 py-2 rounded-xl text-sm font-bold shadow-lg backdrop-blur-sm border border-white/20`}>
-                    {project.tag}
-                  </span>
-                </div>
-
-                {/* Trending Icon for Hot Properties */}
-                {project.tag === 'Destaque' && (
-                  <div className="absolute top-6 right-6">
-                    <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                      <TrendingUp className="w-6 h-6 text-purple-600" />
-                    </div>
-                  </div>
-                )}
-
-                {/* Status Badge */}
-                <div className="absolute bottom-6 left-6">
-                  <span className="text-white text-sm font-semibold bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20">
-                    {project.status}
+                  <span className={`bg-gradient-to-r ${solution.tagColor} text-white px-4 py-2 rounded-xl text-sm font-bold shadow-lg backdrop-blur-sm border border-white/20`}>
+                    {solution.tag}
                   </span>
                 </div>
               </div>
@@ -184,34 +151,24 @@ export function Projects() {
               {/* Content */}
               <div className="p-6 sm:p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {project.title}
+                  {solution.title}
                 </h3>
                 
-                <div className="flex items-start gap-2 text-gray-600 mb-6">
-                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-blue-600" />
-                  <span className="text-sm font-medium">{project.location}</span>
-                </div>
-
-                {/* Price */}
+                <p className="text-blue-600 font-semibold text-sm mb-4">
+                  {solution.subtitle}
+                </p>
+                <p className="text-gray-600 mb-6">
+                  {solution.description}
+                </p>
                 <div className="mb-6 pb-6 border-b border-gray-100">
-                  <p className="text-sm text-gray-500 mb-1">Preço</p>
-                  <p className="text-xl sm:text-2xl font-bold text-gray-900">{project.price}</p>
-                </div>
-
-                {/* Specs */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
-                  <div className="text-center p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
-                    <Maximize2 className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                    <div className="text-xs font-semibold text-gray-900">{project.specs.area}</div>
-                  </div>
-                  <div className="text-center p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
-                    <Bed className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                    <div className="text-xs font-semibold text-gray-900">{project.specs.rooms}</div>
-                  </div>
-                  <div className="text-center p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors">
-                    <Car className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                    <div className="text-xs font-semibold text-gray-900">{project.specs.parking}</div>
-                  </div>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <FileCheck className="w-4 h-4 text-green-500 mt-0.5" />
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* CTA */}
@@ -233,7 +190,7 @@ export function Projects() {
           className="text-center"
         >
           <button className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-xl transition-all font-semibold inline-flex items-center gap-2 shadow-lg">
-            <span>Ver Todos os Empreendimentos</span>
+            <span>Conheça Todos os Nossos Serviços</span>
             <ArrowRight className="w-5 h-5" />
           </button>
         </motion.div>

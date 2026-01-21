@@ -1,16 +1,17 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Play, Award, CheckCircle } from 'lucide-react';
 
 export function VideoShowcase() {
   const highlights = [
-    'Acabamento Premium',
-    'Localização Privilegiada',
-    'Áreas de Lazer Completas',
-    'Segurança 24h',
+    'Ética, alto nível técnico e transparência',
+    'Atendimento aos prazos e preços justos',
+    'Atuação em todo o território nacional',
+    'Soluções completas em regularização imobiliária',
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <section id="compliance" className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -33,19 +34,18 @@ export function VideoShowcase() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 backdrop-blur-sm text-blue-300 text-sm font-semibold rounded-full mb-6 border border-blue-400/30">
               <Award className="w-4 h-4" />
-              <span>Conheça por Dentro</span>
+              <span>Compliance</span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Experimente um Tour Virtual pelos Nossos
+              Soluções com ética, alto nível técnico e transparência
               <span className="block mt-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Empreendimentos
+                Regularização Imobiliária
               </span>
             </h2>
 
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Conheça cada detalhe dos nossos projetos através de uma experiência imersiva. 
-              Veja a qualidade dos acabamentos, áreas comuns e diferenciais que só a Construtora Elite oferece.
+              Nossa equipe técnica está preparada para trazer as soluções mais assertivas e eficientes para o seu negócio.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -67,7 +67,7 @@ export function VideoShowcase() {
             </div>
 
             <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl transition-all font-semibold shadow-lg shadow-blue-600/40 hover:shadow-xl hover:shadow-blue-600/60">
-              Agende uma Visita Presencial
+              Conte-nos sobre o seu projeto
             </button>
           </motion.div>
 
@@ -81,8 +81,8 @@ export function VideoShowcase() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
               <img
-                src="https://images.unsplash.com/photo-1612301988752-5a5b19021f45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2ODkxNjA0OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Tour Virtual"
+                src="https://images.unsplash.com/photo-1521791055366-0d553872125f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBkb2N1bWVudHN8ZW58MXx8fHwxNzY5MDAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Equipe e documentos"
                 className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500"
               />
               
@@ -102,12 +102,12 @@ export function VideoShowcase() {
 
               {/* Duration Badge */}
               <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-sm font-medium rounded-lg">
-                3:45
+                Construsato
               </div>
 
               {/* Quality Badge */}
               <div className="absolute top-4 right-4 px-3 py-1.5 bg-blue-600/80 backdrop-blur-sm text-white text-xs font-semibold rounded-lg">
-                4K
+                ISO 9001
               </div>
             </div>
 

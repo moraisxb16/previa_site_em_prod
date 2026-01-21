@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Star, Quote, MapPin, Calendar, ThumbsUp } from 'lucide-react';
 
@@ -5,74 +6,74 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: 'Maria Silva',
-      role: 'Arquiteta',
-      project: 'Residencial Park View',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop',
+      name: 'Midea Carrier',
+      role: 'Empresa',
+      project: 'Regularização de Empreendimento em São Paulo',
+      image: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=150&h=150&fit=crop',
       rating: 5,
-      text: 'Excelente atendimento desde o primeiro contato. A equipe foi muito profissional e o apartamento foi entregue antes do prazo. Todos os acabamentos são de primeira qualidade. Recomendo de olhos fechados!',
-      highlight: 'Entrega antecipada',
-      date: 'Dezembro 2025',
+      text: 'Mesmo diante de um cenário desafiador, a Midea Carrier entendeu que era o momento de investir em mais um empreendimento na cidade de São Paulo, e o resultado não seria atingido com excelência se não pudéssemos contar com a parceria e todo o suporte da Construsato desde o projeto até a conclusão, obedecendo todos os requisitos legais oriundos de um grande empreendimento.',
+      highlight: 'Parceria de excelência',
+      date: 'Janeiro 2026',
       verified: true,
     },
     {
       id: 2,
-      name: 'João Santos',
-      role: 'Empresário',
-      project: 'Edifício Skyline Premium',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop',
+      name: 'Grupo Empresarial',
+      role: 'Cliente Corporativo',
+      project: 'Licenciamento de Complexo Comercial',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop',
       rating: 5,
-      text: 'Qualidade impecável! Todos os detalhes foram pensados com muito cuidado. A localização é perfeita e o acabamento superou minhas expectativas. Melhor investimento que já fiz.',
-      highlight: 'Acabamento premium',
-      date: 'Novembro 2025',
+      text: 'A Construsato nos auxiliou em todo o processo de licenciamento do nosso complexo comercial. Demonstraram profundo conhecimento técnico e agilidade na resolução de questões complexas junto aos órgãos públicos. O projeto foi aprovado dentro do prazo.',
+      highlight: 'Expertise técnica',
+      date: 'Dezembro 2025',
       verified: true,
     },
     {
       id: 3,
-      name: 'Ana Rodrigues',
-      role: 'Médica',
-      project: 'Condomínio Sunset',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
+      name: 'Incorporadora São Paulo',
+      role: 'Cliente',
+      project: 'EVTL e Aprovações',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=150&h=150&fit=crop',
       rating: 5,
-      text: 'Realizei meu sonho da casa própria com a Construtora Elite. O pós-venda é excelente e sempre que preciso sou muito bem atendida. A infraestrutura do condomínio é sensacional!',
-      highlight: 'Pós-venda excepcional',
-      date: 'Outubro 2025',
+      text: 'Contratamos a Construsato para realizar o Estudo de Viabilidade Técnica e Legal de um terreno estratégico. A análise foi completa e nos deu total segurança para prosseguir com o investimento. Atendimento aos prazos impecável.',
+      highlight: 'Análise completa e segura',
+      date: 'Novembro 2025',
       verified: true,
     },
     {
       id: 4,
-      name: 'Carlos Mendes',
-      role: 'Advogado',
-      project: 'Residencial Horizon',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop',
+      name: 'Rede de Varejo',
+      role: 'Cliente Corporativo',
+      project: 'AVCB e Regularização',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop',
       rating: 5,
-      text: 'Comprei meu segundo imóvel com a Elite e mais uma vez superaram as expectativas. Processo transparente do início ao fim. A localização valoriza muito o investimento.',
-      highlight: 'Alta valorização',
-      date: 'Setembro 2025',
+      text: 'Precisávamos regularizar diversos pontos de venda em São Paulo e a Construsato conduziu todo o processo com maestria. Obtivemos todos os AVCBs e alvarás necessários. Equipe técnica extremamente competente e comprometida.',
+      highlight: 'Compromisso e resultados',
+      date: 'Outubro 2025',
       verified: true,
     },
     {
       id: 5,
-      name: 'Patricia Lima',
-      role: 'Designer',
-      project: 'Residencial Park View',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop',
+      name: 'Administração Predial',
+      role: 'Gestão de Condomínios',
+      project: 'Habite-se e Certidões',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=150&h=150&fit=crop',
       rating: 5,
-      text: 'Como designer, tenho olhar crítico para acabamentos. Fiquei impressionada com a qualidade dos materiais e atenção aos detalhes. Cada ambiente foi pensado com cuidado.',
-      highlight: 'Design impecável',
-      date: 'Agosto 2025',
+      text: 'Tivemos suporte completo na obtenção de certificados e regularização documental. A Construsato foi transparente em cada etapa e entregou tudo com planejamento e previsibilidade.',
+      highlight: 'Atendimento aos prazos',
+      date: 'Setembro 2025',
       verified: true,
     },
     {
       id: 6,
-      name: 'Ricardo Oliveira',
-      role: 'Engenheiro',
-      project: 'Edifício Skyline Premium',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
+      name: 'Construtora Parceira',
+      role: 'Parceiro Técnico',
+      project: 'Aprovações de Projetos',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=150&h=150&fit=crop',
       rating: 5,
-      text: 'Como engenheiro civil, avaliei tudo tecnicamente antes de comprar. A construção é sólida, com tecnologia de ponta. Parabéns à equipe pela excelência em cada detalhe.',
-      highlight: 'Qualidade técnica',
-      date: 'Julho 2025',
+      text: 'A parceria com a Construsato elevou nosso padrão de entrega em aprovações. Eles dominam o processo, antecipam riscos e conduzem a documentação com excelência, reduzindo retrabalho.',
+      highlight: 'Expertise técnica',
+      date: 'Agosto 2025',
       verified: true,
     },
   ];
@@ -99,10 +100,10 @@ export function Testimonials() {
               <span>Depoimentos Verificados</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              O Que Nossos Clientes Dizem
+              Clientes que Confiam em Nosso Trabalho
             </h2>
             <p className="text-gray-600 text-lg">
-              A satisfação de quem já realizou o sonho com a gente
+              Diversos segmentos do mercado atendidos de acordo com as suas especificidades
             </p>
           </motion.div>
         </div>
@@ -217,7 +218,7 @@ export function Testimonials() {
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                   Números que Comprovam Nossa Excelência
                 </h3>
-                <p className="text-blue-100">Dados reais dos nossos clientes</p>
+                <p className="text-blue-100">Dados reais dos nossos projetos</p>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -228,8 +229,8 @@ export function Testimonials() {
                 </div>
                 <div className="text-center">
                   <div className="text-5xl font-bold text-white mb-2 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">250+</div>
-                  <div className="text-blue-100 font-medium">Famílias</div>
-                  <div className="text-blue-200 text-xs mt-1">realizadas</div>
+                  <div className="text-blue-100 font-medium">Processos</div>
+                  <div className="text-blue-200 text-xs mt-1">regularizados</div>
                 </div>
                 <div className="text-center">
                   <div className="text-5xl font-bold text-white mb-2 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">4.9</div>
@@ -238,8 +239,8 @@ export function Testimonials() {
                 </div>
                 <div className="text-center">
                   <div className="text-5xl font-bold text-white mb-2 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">100%</div>
-                  <div className="text-blue-100 font-medium">Recomendação</div>
-                  <div className="text-blue-200 text-xs mt-1">dos clientes</div>
+                  <div className="text-blue-100 font-medium">Conformidade</div>
+                  <div className="text-blue-200 text-xs mt-1">na entrega</div>
                 </div>
               </div>
             </div>

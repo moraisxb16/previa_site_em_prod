@@ -1,22 +1,23 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { CheckCircle2, Award, Users, TrendingUp } from 'lucide-react';
+import { CheckCircle2, Award, Users, Target } from 'lucide-react';
 
 export function About() {
   const features = [
     {
       icon: Award,
-      title: 'Qualidade Certificada',
-      description: 'Certificações ISO e prêmios de excelência em construção civil',
+      title: 'Fundada em Princípios Éticos',
+      description: 'Seriedade, qualidade e eficiência em cada projeto de regularização',
     },
     {
       icon: Users,
-      title: 'Equipe Especializada',
-      description: 'Profissionais altamente qualificados e experientes',
+      title: 'Equipe Técnica Preparada',
+      description: 'Alto nível de entrega e compromisso em cada novo desafio',
     },
     {
-      icon: TrendingUp,
-      title: 'Valorização Garantida',
-      description: 'Empreendimentos em localização estratégica com alta valorização',
+      icon: Target,
+      title: 'Atuação Nacional',
+      description: 'Atendimento personalizado em todo o território brasileiro',
     },
   ];
 
@@ -34,13 +35,13 @@ export function About() {
           >
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1765378025264-ca795700291f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBlbmdpbmVlcmluZyUyMHRlYW18ZW58MXx8fHwxNzY4ODQ5NzI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Equipe de construção"
+                src="https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHRlYW0lMjBvZmZpY2V8ZW58MXx8fHwxNzY5MDE2MDUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Equipe profissional Construsato"
                 className="rounded-2xl shadow-2xl w-full"
               />
               <div className="absolute bottom-4 right-4 sm:-bottom-8 sm:-right-8 bg-blue-600 text-white p-6 sm:p-8 rounded-2xl shadow-xl max-w-[calc(100%-2rem)]">
-                <div className="text-3xl sm:text-4xl font-bold mb-2">30+</div>
-                <div className="text-sm opacity-90">Anos de Tradição</div>
+                <div className="text-3xl sm:text-4xl font-bold mb-2">20+</div>
+                <div className="text-sm opacity-90">Anos no Mercado</div>
               </div>
             </div>
           </motion.div>
@@ -56,12 +57,12 @@ export function About() {
               Sobre Nós
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
-              Referência em Construção Civil
+              Especialistas em Regularização Imobiliária
             </h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Há mais de três décadas no mercado, a Construtora Elite se consolidou como 
-              sinônimo de qualidade, confiança e inovação. Nossa missão é entregar 
-              empreendimentos que superam expectativas, com acabamento impecável e localização privilegiada.
+              Somos uma empresa que atua na área de regularização imobiliária há mais de 20 anos no mercado, fundada em princípios éticos, de seriedade, qualidade e eficiência, com estrutura e metas para vencer grandes desafios.
+              <br /><br />
+              Devido ao exigente nível do mercado atual, senso de responsabilidade e urgência estão presentes em cada um de nossos funcionários, resultando em um alto nível de entrega e compromisso em cada novo projeto.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -88,15 +89,15 @@ export function About() {
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center space-x-2 text-gray-700">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span>Garantia de 5 anos</span>
+                <span>Certificada ISO 9001</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-700">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span>Prazos rigorosos</span>
+                <span>Atendimento aos prazos</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-700">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span>Sustentabilidade</span>
+                <span>Preços justos</span>
               </div>
             </div>
           </motion.div>
