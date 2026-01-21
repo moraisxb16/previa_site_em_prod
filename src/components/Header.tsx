@@ -32,11 +32,11 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">C</span>
+              <span className="text-white font-bold text-xl">S</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Construsato</h1>
-              <p className="text-xs text-gray-600">Regularização Imobiliária</p>
+              <h1 className="text-xl font-bold text-gray-900">SOSRESOLVE</h1>
+              <p className="text-xs text-gray-600">Soluções Imobiliárias</p>
             </div>
           </div>
 
