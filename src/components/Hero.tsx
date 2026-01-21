@@ -170,24 +170,24 @@ export function Hero() {
                 <motion.img
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.35 }}
-                  src="https://images.unsplash.com/photo-1692133226337-55e513450a32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGxlZ2FsJTIwZG9jdW1lbnRzfGVufDF8fHx8MTc2OTAxNTk5MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Regularização Imobiliária Profissional"
+                  src="https://i.ibb.co/YB8TF1zm/photo-1715156153744-d5fd2f1f66eb.jpg"
+                  alt="photo-1715156153744-d5fd2f1f66eb"
                   className="w-full h-[420px] lg:h-[520px] object-cover"
                 />
 
                 {/* Sophisticated overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10" />
 
                 {/* Floating badge */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="glass border border-white/20 rounded-2xl px-6 py-5 shadow-xl">
+                <div className="absolute bottom-8 md:bottom-10 left-6 right-6">
+                  <div className="backdrop-blur-xl bg-gradient-to-r from-gray-900/95 via-gray-800/95 to-gray-900/95 border border-white/30 rounded-2xl px-6 py-5 shadow-xl">
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <div className="text-white text-xl font-bold">Certificada ISO 9001</div>
-                        <div className="text-gray-200 text-sm opacity-90">Atuação em todo o território nacional</div>
+                        <div className="text-white text-xl font-bold drop-shadow-lg">Certificada ISO 9001</div>
+                        <div className="text-gray-200 text-sm drop-shadow-md">Atuação em todo o território nacional</div>
                       </div>
-                      <div className="w-12 h-12 rounded-full bg-blue-600/90 flex items-center justify-center shadow-lg">
+                      <div className="w-12 h-12 rounded-full bg-blue-600/90 flex items-center justify-center shadow-lg shadow-blue-600/50">
                         <Award className="w-6 h-6 text-white" />
                       </div>
                     </div>
