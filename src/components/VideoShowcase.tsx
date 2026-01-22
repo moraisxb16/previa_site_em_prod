@@ -102,7 +102,7 @@ export function VideoShowcase() {
 
               {/* Duration Badge */}
               <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-sm font-medium rounded-lg">
-                Construsato
+                SOSRESOLVE
               </div>
 
               {/* Quality Badge */}

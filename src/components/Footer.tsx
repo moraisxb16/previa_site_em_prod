@@ -12,11 +12,11 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
+                <span className="text-white font-bold text-xl">S</span>
               </div>
               <div>
-                <h3 className="font-bold text-lg">Construsato</h3>
-                <p className="text-xs text-gray-400">Regularização Imobiliária</p>
+                <h3 className="font-bold text-lg">SOSRESOLVE</h3>
+                <p className="text-xs text-gray-400">Soluções Imobiliárias</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -140,7 +140,7 @@ export function Footer() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Construsato. Todos os direitos reservados. | Empresa Certificada ISO 9001
+              © {currentYear} SOSRESOLVE. Todos os direitos reservados. | Empresa Certificada ISO 9001
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
