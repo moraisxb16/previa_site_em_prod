@@ -1,33 +1,21 @@
 import React from 'react';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Projects } from './components/Projects';
-import { Differentials } from './components/Differentials';
-import { Testimonials } from './components/Testimonials';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { TrustBanner } from './components/TrustBanner';
-import { ProcessSteps } from './components/ProcessSteps';
-import { VideoShowcase } from './components/VideoShowcase';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { HomePage, SobrePage, SolucoesPage, ClientesPage, ContatoPage } from './pages';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main>
-        <Hero />
-        <TrustBanner />
-        <About />
-        <ProcessSteps />
-        <Projects />
-        <VideoShowcase />
-        <Differentials />
-        <div id="clientes">
-          <Testimonials />
-        </div>
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/sobre" element={<SobrePage />} />
+        <Route path="/solucoes" element={<SolucoesPage />} />
+        <Route path="/clientes" element={<ClientesPage />} />
+        <Route path="/contato" element={<ContatoPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <Footer />
     </div>
   );

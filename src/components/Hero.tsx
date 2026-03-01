@@ -11,27 +11,41 @@ export function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0" style={{ opacity: 0.05, filter: 'contrast(0.8)' }}>
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}></div>
       </div>
-
       {/* Gradient Orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      {/* Logo watermark (background) */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url(\"https://i.ibb.co/LW8H4Rd/Chat-GPT-Image-27-02-2026-08-28-49.png\")',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '50% 50%',
+          backgroundSize: 'clamp(560px, 62vw, 1180px)',
+          opacity: 0.32,
+          zIndex: 2,
+          filter: 'saturate(1.14) contrast(1.35)',
+        }}
+      />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-4 md:gap-8 lg:gap-16 items-center">
+          <div className="hero-grid grid lg:grid-cols-2 gap-4 md:gap-8 lg:gap-16 items-center">
             {/* Left: content */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="max-w-2xl"
-            >
+            <div className="hero-left-shift">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                className="max-w-2xl"
+              >
               {/* Premium Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
@@ -153,16 +167,18 @@ export function Hero() {
                   </div>
                 </motion.div>
               </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
             {/* Right: premium image column */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="relative"
-            >
-              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="hero-right-shift">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="relative flex items-center"
+              >
+                <div className="hero-image-frame relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 {/* Decorative orbs inside image */}
                 <div className="absolute -top-10 -left-10 w-56 h-56 bg-blue-600/25 rounded-full blur-3xl" />
                 <div className="absolute -bottom-12 -right-10 w-56 h-56 bg-purple-600/25 rounded-full blur-3xl" />
@@ -170,9 +186,9 @@ export function Hero() {
                 <motion.img
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.35 }}
-                  src="https://i.ibb.co/YB8TF1zm/photo-1715156153744-d5fd2f1f66eb.jpg"
-                  alt="photo-1715156153744-d5fd2f1f66eb"
-                  className="w-full h-[420px] lg:h-[520px] object-cover"
+                  src="https://images.unsplash.com/photo-1758448617677-2f8bebc56d9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBhcmNoaXRlY3R1cmFsJTIwYmx1ZXByaW50cyUyMHBsYW5zJTIwaGlnaCUyMGVuZCUyMGRldmVsb3BtZW50fGVufDF8fHx8MTc3MjQwMjU1Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Blueprints e planos arquitetônicos de luxo"
+                  className="w-full h-full object-cover"
                 />
 
                 {/* Sophisticated overlay */}
@@ -194,7 +210,8 @@ export function Hero() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

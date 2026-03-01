@@ -10,13 +10,25 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">SOSRESOLVE</h3>
-                <p className="text-xs text-gray-400">Soluções Imobiliárias</p>
+            <div className="flex items-center mb-6">
+              <div className="flex items-center gap-2">
+                <div className="w-32 h-32 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                  <img
+                    src="https://i.ibb.co/LW8H4Rd/Chat-GPT-Image-27-02-2026-08-28-49.png"
+                    alt="Logo SOSRESOLVE"
+                    className="w-full h-full"
+                    style={{ objectFit: 'contain' }}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">
+                    <span style={{ color: '#e53935' }}>SOS</span>{' '}
+                    <span style={{ color: '#1e3a8a' }}>RESOLVE</span>
+                  </h3>
+                  <p className="text-xs text-gray-400">Soluções Imobiliárias</p>
+                </div>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -109,20 +121,16 @@ export function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400 text-sm">
-                  Rua Voluntários da Pátria, nº 2468, 12º andar, conjuntos 121, 122, 123,124 e 126<br />
-                  Santana – São Paulo | SP<br />
-                  CEP: 02402-000
+                  Rua Santa Cruz, 469 - Cambuí<br />
+                  Campinas - SP<br />
+                  CEP: 13024-100
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <div className="text-gray-400 text-sm">
-                  <a href="tel:+551122615976" className="hover:text-white transition-colors">
-                    (11) 2261-5976
-                  </a>
-                  <br />
-                  <a href="tel:+551122655599" className="hover:text-white transition-colors">
-                    (11) 2265-5599
+                  <a href="tel:+551932538006" className="hover:text-white transition-colors">
+                    (19) 3253-8006
                   </a>
                 </div>
               </li>

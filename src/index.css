@@ -3106,3 +3106,15 @@ input:focus, textarea:focus, select:focus, button:focus {
   inherits: false;
   initial-value: 1;
 }
+
+/* Custom (scoped): Hero sizing helpers */
+
+.hero-image-frame {
+  height: clamp(420px, 60vh, 660px);
+}
+
+@media (min-width: 1024px) {
+  .hero-image-frame {
+    height: clamp(620px, 78vh, 920px);
+  }
+}

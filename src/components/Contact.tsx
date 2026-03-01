@@ -31,9 +31,9 @@ export function Contact() {
     {
       icon: Phone,
       title: 'Telefone',
-      content: '(11) 2261-5976 | 2265-5599',
+      content: '(19) 3253-8006',
       subcontent: 'Seg - Sex, 9h às 18h',
-      href: 'tel:+551122615976',
+      href: 'tel:+551932538006',
       gradient: 'from-blue-600 to-blue-700',
     },
     {
@@ -134,8 +134,8 @@ export function Contact() {
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 mb-1">Endereço</h3>
                   <p className="text-gray-700 font-medium">
-                    Rua Voluntários da Pátria, nº 2468, 12º andar, conjuntos 121, 122, 123,124 e 126<br />
-                    Santana – São Paulo | SP, CEP: 02402-000
+                    Rua Santa Cruz, 469 - Cambuí<br />
+                    Campinas - SP, CEP: 13024-100
                   </p>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export function Contact() {
                         onBlur={() => setFocusedField('')}
                         required
                         className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:bg-white outline-none transition-all"
-                        placeholder="(11) 2261-5976"
+                        placeholder="(19) 3253-8006"
                       />
                     </div>
                   </div>
