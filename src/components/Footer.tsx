@@ -12,7 +12,13 @@ export function Footer() {
           <div>
             <div className="flex items-center mb-6">
               <div className="flex items-center gap-2">
-                <div className="w-32 h-32 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                <div
+                  className="rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0"
+                  style={{
+                    width: 'clamp(96px, 7.5vw, 150px)',
+                    height: 'clamp(96px, 7.5vw, 150px)',
+                  }}
+                >
                   <img
                     src="https://i.ibb.co/LW8H4Rd/Chat-GPT-Image-27-02-2026-08-28-49.png"
                     alt="Logo SOSRESOLVE"
@@ -23,11 +29,26 @@ export function Footer() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg">
+                  <h3
+                    className="font-bold"
+                    style={{
+                      fontSize: 'clamp(1.35rem, 1.55vw, 2rem)',
+                      lineHeight: 1.05,
+                      letterSpacing: '-0.01em',
+                    }}
+                  >
                     <span style={{ color: '#e53935' }}>SOS</span>{' '}
                     <span style={{ color: '#1e3a8a' }}>RESOLVE</span>
                   </h3>
-                  <p className="text-xs text-gray-400">Soluções Imobiliárias</p>
+                  <p
+                    className="text-gray-400"
+                    style={{
+                      fontSize: 'clamp(0.9rem, 0.95vw, 1.05rem)',
+                      marginTop: 6,
+                    }}
+                  >
+                    Soluções Imobiliárias
+                  </p>
                 </div>
               </div>
             </div>
