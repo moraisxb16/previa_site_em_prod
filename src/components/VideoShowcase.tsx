@@ -1,14 +1,26 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Play, Award, CheckCircle } from 'lucide-react';
+import { Award, CheckCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export function VideoShowcase() {
+  const navigate = useNavigate();
+
   const highlights = [
     'Ética, alto nível técnico e transparência',
     'Atendimento aos prazos e preços justos',
     'Atuação em todo o território nacional',
     'Soluções completas em regularização imobiliária',
   ];
+
+  const scrollToContactForm = () => {
+    const element = document.getElementById('contact-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    navigate('/contato', { state: { scrollTo: 'contact-form' } });
+  };
 
   return (
     <section id="compliance" className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
@@ -66,7 +78,11 @@ export function VideoShowcase() {
               ))}
             </div>
 
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl transition-all font-semibold shadow-lg shadow-blue-600/40 hover:shadow-xl hover:shadow-blue-600/60">
+            <button
+              type="button"
+              onClick={scrollToContactForm}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl transition-all font-semibold shadow-lg shadow-blue-600/40 hover:shadow-xl hover:shadow-blue-600/60"
+            >
               Conte-nos sobre o seu projeto
             </button>
           </motion.div>
@@ -79,26 +95,17 @@ export function VideoShowcase() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <img
-                src="https://images.unsplash.com/photo-1521791055366-0d553872125f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBkb2N1bWVudHN8ZW58MXx8fHwxNzY5MDAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Equipe e documentos"
+                src="https://i.ibb.co/1fjL1VDS/ik14wmt9.png"
+                alt="Equipe SOS RESOLVE"
                 className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-
-              {/* Play Button */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl group-hover:bg-white transition-colors"
-                >
-                  <Play className="w-8 h-8 text-blue-600 ml-1" />
-                </motion.div>
-              </div>
 
               {/* Duration Badge */}
               <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-sm font-medium rounded-lg">

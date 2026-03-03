@@ -1,9 +1,12 @@
 import { motion } from 'motion/react';
 import React, { useState } from 'react';
 import { FileSearch, FileCheck, Building2, Shield, ArrowRight, Sparkles } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export function Projects() {
   const [activeFilter, setActiveFilter] = useState('todos');
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const filters = [
     { id: 'todos', label: 'Todos os Serviços' },
@@ -66,6 +69,14 @@ export function Projects() {
   const filteredProjects = activeFilter === 'todos' 
     ? solutions 
     : solutions.filter(p => p.category === activeFilter);
+
+  const goToServicesPage = () => {
+    if (location.pathname === '/solucoes') {
+      document.getElementById('solucoes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    navigate('/solucoes');
+  };
 
   return (
     <section id="solucoes" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
@@ -172,10 +183,18 @@ export function Projects() {
                 </div>
 
                 {/* CTA */}
-                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 rounded-xl transition-all font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/50 group/btn">
+                <a
+                  href={`https://wa.me/551932538006?text=${encodeURIComponent(
+                    `Olá! Vim pelo site da SOS RESOLVE. Quero saber mais sobre: ${solution.title}.`
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 rounded-xl transition-all font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/50 group/btn"
+                  aria-label={`Falar no WhatsApp sobre ${solution.title}`}
+                >
                   <span>Saiba Mais</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -189,7 +208,11 @@ export function Projects() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <button className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-xl transition-all font-semibold inline-flex items-center gap-2 shadow-lg">
+          <button
+            type="button"
+            onClick={goToServicesPage}
+            className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-xl transition-all font-semibold inline-flex items-center gap-2 shadow-lg"
+          >
             <span>Conheça Todos os Nossos Serviços</span>
             <ArrowRight className="w-5 h-5" />
           </button>

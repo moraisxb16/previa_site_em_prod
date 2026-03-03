@@ -31,7 +31,7 @@ export function Contact() {
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      content: '(19) 3253-8006',
+      content: 'WhatsApp: (19) 3253-8006',
       subcontent: 'Atendimento rápido',
       href: 'https://wa.me/551932538006',
       gradient: 'from-green-600 to-green-700',
@@ -39,9 +39,9 @@ export function Contact() {
     {
       icon: Mail,
       title: 'E-mail',
-      content: 'contato@sosresolve.com.br',
+      content: 'sosresolve@gmail.com',
       subcontent: 'Respondemos em até 24h',
-      href: 'mailto:contato@sosresolve.com.br',
+      href: 'mailto:sosresolve@gmail.com',
       gradient: 'from-purple-600 to-purple-700',
     },
   ];
@@ -165,7 +165,11 @@ export function Contact() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-3"
           >
-            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl border border-gray-100">
+            <div
+              id="contact-form"
+              className="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl border border-gray-100"
+              style={{ scrollMarginTop: 112 }}
+            >
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Preencha o formulário
@@ -232,7 +236,7 @@ export function Contact() {
                         onBlur={() => setFocusedField('')}
                         required
                         className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:bg-white outline-none transition-all"
-                        placeholder="(19) 3253-8006"
+                        placeholder="WhatsApp: (19) 3253-8006"
                       />
                     </div>
                   </div>
@@ -305,10 +309,15 @@ export function Contact() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-6 text-center"
             >
-              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white rounded-xl font-semibold shadow-lg shadow-emerald-600/30 hover:shadow-xl hover:shadow-emerald-600/50 transition-all">
+              <a
+                href="https://wa.me/551932538006"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white rounded-xl font-semibold shadow-lg shadow-emerald-600/30 hover:shadow-xl hover:shadow-emerald-600/50 transition-all"
+              >
                 <Calendar className="w-5 h-5" />
                 <span>Agendar Visita Presencial</span>
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
