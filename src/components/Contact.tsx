@@ -31,7 +31,7 @@ export function Contact() {
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      content: 'WhatsApp: (19) 3253-8006',
+      content: '(19) 3253-8006',
       subcontent: 'Atendimento rápido',
       href: 'https://wa.me/551932538006',
       gradient: 'from-green-600 to-green-700',
@@ -236,7 +236,7 @@ export function Contact() {
                         onBlur={() => setFocusedField('')}
                         required
                         className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:bg-white outline-none transition-all"
-                        placeholder="WhatsApp: (19) 3253-8006"
+                        placeholder="(19) 3253-8006"
                       />
                     </div>
                   </div>

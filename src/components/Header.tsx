@@ -88,7 +88,7 @@ export function Header() {
           <div className="hidden lg:flex items-center space-x-6">
             <a href="https://wa.me/551932538006" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">WhatsApp: (19) 3253-8006</span>
+              <span className="text-sm font-medium">(19) 3253-8006</span>
             </a>
             <NavLink
               to="/contato"
@@ -128,7 +128,7 @@ export function Header() {
               <div className="pt-4 border-t border-gray-200">
                 <a href="https://wa.me/551932538006" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm font-medium">WhatsApp: (19) 3253-8006</span>
+                  <span className="text-sm font-medium">(19) 3253-8006</span>
                 </a>
               </div>
             </div>

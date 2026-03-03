@@ -170,7 +170,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  WhatsApp: (19) 3253-8006
+                  (19) 3253-8006
                 </a>
               </li>
               <li className="flex items-center gap-3">
