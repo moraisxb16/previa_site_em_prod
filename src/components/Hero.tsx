@@ -200,7 +200,7 @@ export function Hero() {
                   <div className="backdrop-blur-xl bg-gradient-to-r from-gray-900/95 via-gray-800/95 to-gray-900/95 border border-white/30 rounded-2xl px-6 py-5 shadow-xl">
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <div className="text-white text-xl font-bold drop-shadow-lg">Certificada ISO 9001</div>
+                        <div className="text-white text-xl font-bold drop-shadow-lg">Segurança jurídica e agilidade</div>
                         <div className="text-gray-200 text-sm drop-shadow-md">Atuação em todo o território nacional</div>
                       </div>
                       <div className="w-12 h-12 rounded-full bg-blue-600/90 flex items-center justify-center shadow-lg shadow-blue-600/50">

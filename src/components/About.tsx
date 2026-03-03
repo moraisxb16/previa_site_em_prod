@@ -36,7 +36,7 @@ export function About() {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHRlYW0lMjBvZmZpY2V8ZW58MXx8fHwxNzY5MDE2MDUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Equipe profissional Construsato"
+                alt="Equipe profissional SOS Resolve"
                 className="rounded-2xl shadow-2xl w-full"
               />
               <div className="absolute bottom-4 right-4 sm:-bottom-8 sm:-right-8 bg-blue-600 text-white p-6 sm:p-8 rounded-2xl shadow-xl max-w-[calc(100%-2rem)]">
@@ -89,7 +89,7 @@ export function About() {
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center space-x-2 text-gray-700">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span>Certificada ISO 9001</span>
+                <span>Segurança e conformidade jurídica</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-700">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />

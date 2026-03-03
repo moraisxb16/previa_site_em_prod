@@ -29,27 +29,19 @@ export function Contact() {
 
   const contactMethods = [
     {
-      icon: Phone,
-      title: 'Telefone',
-      content: '(19) 3253-8006',
-      subcontent: 'Seg - Sex, 9h às 18h',
-      href: 'tel:+551932538006',
-      gradient: 'from-blue-600 to-blue-700',
-    },
-    {
       icon: MessageCircle,
       title: 'WhatsApp',
-      content: '(11) 94763-6231',
+      content: '(19) 3253-8006',
       subcontent: 'Atendimento rápido',
-      href: 'https://wa.me/5511947636231',
+      href: 'https://wa.me/551932538006',
       gradient: 'from-green-600 to-green-700',
     },
     {
       icon: Mail,
       title: 'E-mail',
-      content: 'construsato@construsato.com.br',
+      content: 'contato@sosresolve.com.br',
       subcontent: 'Respondemos em até 24h',
-      href: 'mailto:construsato@construsato.com.br',
+      href: 'mailto:contato@sosresolve.com.br',
       gradient: 'from-purple-600 to-purple-700',
     },
   ];

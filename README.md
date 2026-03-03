@@ -1,7 +1,7 @@
 
-  # Construtora Website Design
+  # SOS RESOLVE
 
-  This is a code bundle for Construtora Website Design. The original project is available at https://www.figma.com/design/GUbwpEk6INhBugnpKzTDna/Construtora-Website-Design.
+  This is a code bundle for SOS RESOLVE.
 
   ## Running the code
 

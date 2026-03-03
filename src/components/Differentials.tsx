@@ -6,8 +6,8 @@ export function Differentials() {
   const differentials = [
     {
       icon: Shield,
-      title: 'Certificação ISO 9001',
-      description: 'Empresa certificada com padrões internacionais de qualidade em gestão',
+      title: 'Segurança Jurídica',
+      description: 'Atuação com foco em conformidade, documentação e decisões com previsibilidade',
       color: 'bg-blue-100 text-blue-600',
     },
     {

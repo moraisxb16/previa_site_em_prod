@@ -21,7 +21,7 @@ export function Footer() {
                 >
                   <img
                     src="https://i.ibb.co/LW8H4Rd/Chat-GPT-Image-27-02-2026-08-28-49.png"
-                    alt="Logo SOSRESOLVE"
+                    alt="Logo SOS RESOLVE"
                     className="w-full h-full"
                     style={{ objectFit: 'contain' }}
                     loading="lazy"
@@ -150,15 +150,15 @@ export function Footer() {
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <div className="text-gray-400 text-sm">
-                  <a href="tel:+551932538006" className="hover:text-white transition-colors">
-                    (19) 3253-8006
+                  <a href="https://wa.me/551932538006" className="hover:text-white transition-colors">
+                    WhatsApp: (19) 3253-8006
                   </a>
                 </div>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <a href="mailto:construsato@construsato.com.br" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  construsato@construsato.com.br
+                <a href="mailto:contato@sosresolve.com.br" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  contato@sosresolve.com.br
                 </a>
               </li>
             </ul>
@@ -169,7 +169,7 @@ export function Footer() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {currentYear} SOSRESOLVE. Todos os direitos reservados. | Empresa Certificada ISO 9001
+              © {currentYear} SOS RESOLVE. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">

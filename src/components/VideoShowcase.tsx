@@ -102,12 +102,12 @@ export function VideoShowcase() {
 
               {/* Duration Badge */}
               <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-sm font-medium rounded-lg">
-                SOSRESOLVE
+                SOS RESOLVE
               </div>
 
               {/* Quality Badge */}
               <div className="absolute top-4 right-4 px-3 py-1.5 bg-blue-600/80 backdrop-blur-sm text-white text-xs font-semibold rounded-lg">
-                ISO 9001
+                20+ anos de mercado
               </div>
             </div>
 

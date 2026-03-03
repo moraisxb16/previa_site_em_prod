@@ -4,7 +4,7 @@ import { Award, Building2, Users, TrendingUp } from 'lucide-react';
 
 export function TrustBanner() {
   const logos = [
-    { name: 'Midea Carrier', icon: Building2 },
+    { name: 'Empresas e Incorporadoras', icon: Building2 },
     { name: 'Igreja Bola de Neve', icon: Users },
     { name: 'Anvisa', icon: Award },
     { name: 'Corpo de Bombeiros', icon: TrendingUp },
