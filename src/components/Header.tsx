@@ -24,7 +24,6 @@ export function Header() {
     { to: '/', label: 'Início', end: true as const },
     { to: '/sobre', label: 'Sobre Nós' },
     { to: '/solucoes', label: 'Soluções' },
-    { to: '/clientes', label: 'Clientes' },
     { to: '/contato', label: 'Contato' },
   ];
 
