@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Calendar } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Calendar, Instagram } from 'lucide-react';
 
 export function Contact() {
   const companyEmail = 'contato@sosresolve.com.br';
@@ -69,6 +69,14 @@ export function Contact() {
       subcontent: 'Respondemos em até 24h',
       href: 'mailto:contato@sosresolve.com.br',
       gradient: 'from-purple-600 to-purple-700',
+    },
+    {
+      icon: Instagram,
+      title: 'Instagram',
+      content: '@sosresolve.si',
+      subcontent: 'Acompanhe nossas novidades',
+      href: 'https://instagram.com/sosresolve.si',
+      gradient: 'from-pink-600 to-purple-700',
     },
   ];
 
@@ -174,9 +182,7 @@ export function Contact() {
                 <div>
                   <h3 className="font-bold mb-2">Horário de Atendimento</h3>
                   <p className="text-blue-100 text-sm leading-relaxed">
-                    Segunda a Sexta: 9h - 18h<br />
-                    Sábado: 9h - 13h<br />
-                    Domingo: Fechado
+                    Segunda a Sexta: 9h - 18:00
                   </p>
                 </div>
               </div>

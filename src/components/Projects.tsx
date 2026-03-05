@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import React, { useState } from 'react';
-import { FileSearch, FileCheck, Building2, Shield, ArrowRight, Sparkles } from 'lucide-react';
+import { FileCheck, Building2, Shield, Scale, ArrowRight, Sparkles } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export function Projects() {
@@ -10,7 +10,6 @@ export function Projects() {
 
   const filters = [
     { id: 'todos', label: 'Todos os Serviços' },
-    { id: 'estudos', label: 'Estudos' },
     { id: 'licenciamentos', label: 'Licenciamentos' },
     { id: 'aprovacoes', label: 'Aprovações' },
   ];
@@ -18,15 +17,15 @@ export function Projects() {
   const solutions = [
     {
       id: 1,
-      title: 'EVTL - Estudos de Viabilidade',
-      subtitle: 'Análise completa para seu empreendimento',
-      description: 'Os EVTL’s (Estudos de Viabilidade Técnica e Legal) englobam serviços como análises de imóveis ou terrenos, avaliações técnicas e legais, estudos de massa e estimativa de custos quanto ao escopo de processos regulatórios. Apresentamos diagnósticos que avaliam o empreendimento de forma completa, em busca da melhor solução.',
-      image: 'https://images.unsplash.com/photo-1721132537184-5494c01ed87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3QlMjBibHVlcHJpbnQlMjBwbGFubmluZ3xlbnwxfHx8fDE3Njg5NzA0Njd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      icon: FileSearch,
-      tag: 'Análise',
-      tagColor: 'from-blue-600 to-blue-700',
-      category: 'estudos',
-      features: ['Análise de imóveis', 'Avaliação técnica e legal', 'Estudos de massa', 'Estimativa de custos'],
+      title: 'Usucapião',
+      subtitle: 'Regularização legal da posse',
+      description: 'Usucapião é um processo legal que permite a regularização da propriedade de um imóvel quando uma pessoa ocupa e utiliza esse bem de forma contínua, pacífica e por um determinado período de tempo previsto em lei. Em outras palavras, é uma forma de transformar a posse de um imóvel em propriedade legal, garantindo segurança jurídica para quem já mora ou utiliza o local há anos. Esse procedimento é muito utilizado para regularizar casas, terrenos ou imóveis que nunca tiveram a documentação formalizada.',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      icon: Scale,
+      tag: 'Regularização',
+      tagColor: 'from-indigo-600 to-indigo-700',
+      category: 'aprovacoes',
+      features: ['Análise da posse e documentação', 'Orientação jurídica especializada', 'Regularização de casas e terrenos', 'Segurança jurídica da propriedade'],
     },
     {
       id: 2,
@@ -69,6 +68,14 @@ export function Projects() {
   const filteredProjects = activeFilter === 'todos' 
     ? solutions 
     : solutions.filter(p => p.category === activeFilter);
+
+  const getServiceAnchorId = (title: string) =>
+    title
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
 
   const goToServicesPage = () => {
     if (location.pathname === '/solucoes') {
@@ -136,6 +143,7 @@ export function Projects() {
           {filteredProjects.map((solution, index) => (
             <motion.div
               key={solution.id}
+              id={getServiceAnchorId(solution.title)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 export function Footer() {
   const currentYear = 2026;
@@ -55,6 +55,18 @@ export function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Há mais de 20 anos guiando você para resultados seguros em regularização imobiliária. Expanda seu negócio com segurança.
             </p>
+            <a
+              href="https://instagram.com/sosresolve.si"
+              className="group inline-flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1"
+              aria-label="Abrir Instagram SOS RESOLVE"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+                <Instagram className="w-5 h-5 text-pink-400" />
+              </span>
+              <span className="text-sm font-medium">@sosresolve.si</span>
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -94,13 +106,8 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-6">Nossos Serviços</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  EVTL - Estudos de Viabilidade
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Licenciamentos
+                <a href="/solucoes#usucapiao" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Usucapião
                 </a>
               </li>
               <li>
