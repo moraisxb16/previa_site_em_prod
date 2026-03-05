@@ -177,8 +177,8 @@ export function Footer() {
                 <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-blue-400" />
                 </div>
-                <a href="mailto:sosresolve@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  sosresolve@gmail.com
+                <a href="mailto:contato@sosresolve.com.br" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  contato@sosresolve.com.br
                 </a>
               </li>
             </ul>

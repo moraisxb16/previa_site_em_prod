@@ -113,12 +113,12 @@ export function Differentials() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Fale com nossos especialistas e descubra a melhor solução para o seu negócio
             </p>
-            <button
-              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-colors font-semibold"
+            <a
+              href="mailto:contato@sosresolve.com.br"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-colors font-semibold"
             >
               Entrar em Contato
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

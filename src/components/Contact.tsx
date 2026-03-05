@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Calendar } from 'lucide-react';
 
 export function Contact() {
+  const companyEmail = 'contato@sosresolve.com.br';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,8 +17,32 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você implementaria o envio do formulário
-    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+
+    const interestLabels: Record<string, string> = {
+      indicacao: 'Indicacao de alguem',
+      google: 'Pesquisa no Google',
+      linkedin: 'LinkedIn',
+      redes: 'Redes Sociais (Instagram e Facebook)',
+    };
+
+    const interestText = formData.interest ? interestLabels[formData.interest] ?? formData.interest : 'Nao informado';
+    const messageText = formData.message.trim() || 'Nao informada';
+    const subject = `Novo contato pelo site - ${formData.name}`;
+    const body = [
+      'Novo contato recebido pelo site SOS RESOLVE:',
+      '',
+      `Nome: ${formData.name}`,
+      `E-mail: ${formData.email}`,
+      `Telefone: ${formData.phone}`,
+      `Como nos conheceu: ${interestText}`,
+      '',
+      'Mensagem:',
+      messageText,
+    ].join('\n');
+
+    const mailtoUrl = `mailto:${companyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+
     setFormData({ name: '', email: '', phone: '', interest: '', message: '' });
   };
 
@@ -39,9 +65,9 @@ export function Contact() {
     {
       icon: Mail,
       title: 'E-mail',
-      content: 'sosresolve@gmail.com',
+      content: 'contato@sosresolve.com.br',
       subcontent: 'Respondemos em até 24h',
-      href: 'mailto:sosresolve@gmail.com',
+      href: 'mailto:contato@sosresolve.com.br',
       gradient: 'from-purple-600 to-purple-700',
     },
   ];
@@ -214,7 +240,7 @@ export function Contact() {
                         onBlur={() => setFocusedField('')}
                         required
                         className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:bg-white outline-none transition-all"
-                        placeholder="seu@email.com"
+                        placeholder="contato@sosresolve.com.br"
                       />
                     </div>
                   </div>
