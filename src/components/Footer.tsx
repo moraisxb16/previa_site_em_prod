@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = 2026;
@@ -55,20 +55,6 @@ export function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Há mais de 20 anos guiando você para resultados seguros em regularização imobiliária. Expanda seu negócio com segurança.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
